@@ -11,12 +11,15 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-//var mongoDB = 'mongodb://127.0.0.1:27017/myappdb';
-var mongoDB = 'mongodb://172.17.0.2:27017/myappdb';
+const db = require('./db');
+/** 
+var mongoDB = 'mongodb://127.0.0.1:27017/myappdb';
+//var mongoDB = 'mongodb://172.17.0.2:27017/myappdb';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology:true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+*/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
